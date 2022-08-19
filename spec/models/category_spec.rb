@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Category, type: :model do
   subject do
     user = User.create! name: 'fred', email: 'fred@test.com', password: 'fred123'
-    Category.create! name: 'Entertainment', user: user
+    Category.create! name: 'Entertainment', user:
   end
 
   it 'test a record is invalid without a name' do

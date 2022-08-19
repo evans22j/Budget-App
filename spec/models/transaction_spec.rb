@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Record, type: :model do
   subject do
     user = User.create! name: 'fred', email: 'fred@test.com', password: 'fred123'
-    Record.create! name: 'La Ferrari', amount: 1_300_000, user: user
+    Record.create! name: 'La Ferrari', amount: 1_300_000, user:
   end
 
   it 'test a record is invalid without a name' do
