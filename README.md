@@ -15,14 +15,12 @@
 
 ### Screenshots 📸
 
-|       Home Page                 |          Category Page                |         Add Category Form                |
-:--------------------------------:|:-------------------------------------:|:-------------------------------------------:|
-![](./app/assets/images/img1.png) |![](./app/assets/images/img3.png) |![](./app/assets/images/img4.png) |
+    Categories
+![](./app/assets/images/img1.png) 
 
 
-|         Category-Transaction    |        Add Transaction Form           |         Transaction Details                |
-:--------------------------------:|:-------------------------------------:|:-------------------------------------------:|
-![](./app/assets/images/img5.png) |![](./app/assets/images/img7.png) |![](./app/assets/images/img6.png) |
+    Category-Details 
+![](./app/assets/images/img5.png) 
 
 
 
@@ -48,11 +46,11 @@
 
 ## Live Demo 🔗
 
-[Live Demo Link](https://budgy-budget-api.herokuapp.com)
+[Live Demo Link]()
 
 ## Loom Video 🔗
 
-[Loom Video Link](https://www.loom.com/share/2d1971886acf41eab27ea244c1f1acdb)
+[Loom Video Link]()
 
 ## Getting Started
 
@@ -90,8 +88,8 @@ $   cd Rails-capstone-Budget-app # Move into the application directory
 ### Clone this repository
 
 ```bash
-$ git clone https://github.com/BenMukebo/Budgy-Budget.git
-$ cd Budgy-Budget
+$ git clone https://github.com/evans22j/Budget-App.git
+$ cd Budget-App
 ```
 
 ### Create the database
@@ -228,18 +226,18 @@ This project is build with:
 
 ## Authors
 
-👤 **Ben Mukebo**
+👤 **Evans Sitibekiso**
 
-- GitHub: [@BenMukebo](https://github.com/BenMukebo)
-- Twitter [@BenMukebo](https://twitter.com/BenMukebo)
-- LinkedIn [BenMukebo](https://www.linkedin.com/in/kasongo-mukebo-ben-591720205/)
+- GitHub: [@evans22j](https://github.com/evans22j)
+- Twitter: [@Evans_22J](https://twitter.com/Evans_22J)
+- LinkedIn: [@Evans Sitibekiso](https://www.linkedin.com/in/evans-sitibekiso/)
 
 ## 🤝 Contributor
 
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/BenMukebo/Blog-app/issues).
+Feel free to check the [issues page](https://github.com/evans22j/Budget-App/issues).
 
 ## Show your support
 
