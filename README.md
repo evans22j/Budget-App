@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Budgy-Budget
+# Budget-App
 
 
 ## Description
@@ -46,11 +46,11 @@
 
 ## Live Demo 🔗
 
-[Live Demo Link]()
+[Live Demo Link](https://evans-budget-app.herokuapp.com/)
 
 ## Loom Video 🔗
 
-[Loom Video Link]()
+[Loom Video Link](https://www.loom.com/share/8822f390decc42c2848f3969c4211349)
 
 ## Getting Started
 
