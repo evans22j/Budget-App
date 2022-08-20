@@ -46,7 +46,7 @@
 
 ## Live Demo 🔗
 
-[Live Demo Link](https://evans-budget-app.herokuapp.com/)
+[Live Demo Link](https://budget-a.herokuapp.com/)
 
 ## Loom Video 🔗
 
