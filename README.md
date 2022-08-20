@@ -47,7 +47,7 @@
 
 ## Live Demo 🔗
 
-[Live Demo Link](https://budget-a.herokuapp.com/)
+[Live Demo Link](https://budgy-budget-api.herokuapp.com/)
 
 ## Loom Video 🔗
 
