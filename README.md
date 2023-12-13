@@ -45,14 +45,6 @@
 - Limit access to webapp resources based on authorization rules.
 - Analyze in writing why you have made a coding choice using one structure over another.
 
-## Live Demo 🔗
-
-[Live Demo Link](https://budgy-budget-api.herokuapp.com/)
-
-## Loom Video 🔗
-
-[Loom Video Link](https://www.loom.com/share/8822f390decc42c2848f3969c4211349)
-
 ## Getting Started
 
 To get a local copy for this project and running follow these simple example steps.
@@ -60,31 +52,10 @@ To get a local copy for this project and running follow these simple example ste
 ### Prerequisites
 
 - You need to have git installed in your machine.
-- Install a recent version of Postgres.
-- Already install Rails
+- Install Docker CLI or Docker Desktop
 
 
 ## Setup
-
-## Setting Up PostgreSQL
-
-- The postgres installation doesn't setup a user for you, so you'll need to follow these steps to create a user with permission to create databases
-
-```bash
-$  sudo -u postgres createuser blog-app -s
-```
-
-### Creating the Budgy-Budget application
-
-- To create project with PostgreSQL database 
-
-```bash
-$   rails new Rails-capstone-Budgy-Budget --database=postgresql  #or
-$   rails new Rails-capstone-Budgy-Budget -d postgresql
-
-$   cd Rails-capstone-Budget-app # Move into the application directory
-```
-
 
 ### Clone this repository
 
@@ -93,130 +64,16 @@ $ git clone https://github.com/evans22j/Budget-App.git
 $ cd Budget-App
 ```
 
-### Create the database
+
+- To start the server
 
 ```bash
-$   rails db:create   # or
-$   rake db:create
-```
-
-### Install linter and 
-
-- Rubocop gem
-
-```bash
-$  bundle init
-$  bundle install
-```
-- Stylelint package
-
-```bash
-$  npm init -y
-$  npm install
-$  npm install --save-dev stylelint@13.x stylelint-scss@3.x stylelint-config-standard@21.x stylelint-csstree-validator@1.x
-
-```
-
-- Run linter
-
-```bash
-$  rubocop .
-$  npx stylelint "**/*.{css,scss}" 
-```
-
-- In auto-correct mode, RuboCop will try to automatically fix offenses:
-
-```bash
-$  rubocop -A # or
-$  rubocop --auto-correct-all
-$  npx stylelint "**/*.{css,scss}" --fix 
-```
-
-
-### Starting up the Web Server
-
-```bash
-$   rails s # or
-$   rails server # or
-$   rails server -p3001
-```
-
-- To restart the server
-
-```bash
-$  sudo service postgresql restart 
-$  rails db:reset #to clean the database                                                                    
+$ docker-compose up --build                                                                   
 ```
 
 #### Listing Existing Routes
 
 - You can now visit `http://localhost:3000` to view your new website!
-
- You can also execute the `rails routes` command in your terminal to produce the same output.
-
-
-#### Generate rspec
-
-- At the first you need to include those lines in your Gemfile
-
-```bash
-  gem 'rails-controller-testing'
-  gem 'rspec-rails'
-```
-
-#### Install RSpec
-
-```bash
-$  rails generate rspec:install
-```
-- This should generate some files that you will need to run your tests and should give us a Controller and a View
-
-- Then run:
-
-```bash
-$  rspec spec     # to test if your tests are passed
-```
-
-#### Generate MVC with scaffold
-
-```bash
-  $  rails g scaffold category name user:belongs_to
-  $  rails g scaffold records name amount:decimal user:belongs_to 
-  $  rails g scaffold category_records user:belongs_to
-  $  rails g scaffold category_records category:belongs_to record:belongs_to
-```
-
-#### Generate Schema
-
-- To push the Migration into the database
-
-```bash
-  $   rails db:migrate
-```
-- We use the seeds.rb file to records in the database
-- To drop, create a table and to migrate and send the seed into the database:
-
-```bash
-  $   rails db:drop db:create db:migrate db:seed  
-```
-
-- To check available routes
-
-```bash
-  $   rails routes  
-```
-
-#### Run Capybara
-
-```bash
-$  bundle exec rspec ./spec/features/
-```
-
-#### Run spec
-
-```bash
-$  bundle exec rspec ./spec/models/
-```
 
 ## Built With 🛠️
 
@@ -230,13 +87,11 @@ This project is build with:
 👤 **Evans Sitibekiso**
 
 - GitHub: [@evans22j](https://github.com/evans22j)
-- Twitter: [@Evans_22J](https://twitter.com/Evans_22J)
-- LinkedIn: [@Evans Sitibekiso](https://www.linkedin.com/in/evans-sitibekiso/)
 
 ## 🤝 Contributor
 
-
-Contributions, issues, and feature requests are welcome!
+👤 **Suraj Kumar**
+- GitHub: [@Suraj kumar](https://github.com/Surajkumar98012)
 
 Feel free to check the [issues page](https://github.com/evans22j/Budget-App/issues).
 
