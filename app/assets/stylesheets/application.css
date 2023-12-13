@@ -5,8 +5,8 @@
   --size-border: 2px solid var(--text-color);
   --box-border: 2px solid var(--shadow-color);
   --box-hover: 1px solid var(--primary-color);
-  --bacground-color: #e5e5e5;
-  --primary-color: hsla(234, 86%, 49%, 0.938);
+  --bacground-color: #919191;
+  --primary-color: rgb(250,250,250);
   --btn-color: #5fb523;
   --secondary-color: #02428b;
   --text-color: #434b54;

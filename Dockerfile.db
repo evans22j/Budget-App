@@ -1,0 +1,4 @@
+FROM postgres:13
+ENV POSTGRES_USER Budget
+ENV POSTGRES_PASSWORD password
+ENV POSTGRES_DB Budget-App

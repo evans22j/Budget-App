@@ -47,6 +47,9 @@ Rails.application.configure do
   # Raise exceptions for disallowed deprecations.
   config.active_support.disallowed_deprecation = :raise
 
+  config.web_console.permissions = '172.20.0.2'
+
+
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
   # Tell Active Support which deprecation messages to disallow.
