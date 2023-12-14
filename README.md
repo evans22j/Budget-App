@@ -60,7 +60,7 @@ To get a local copy for this project and running follow these simple example ste
 ### Clone this repository
 
 ```bash
-$ git clone https://github.com/evans22j/Budget-App.git
+$ git clone https://github.com/Surajkumar98012/Budget-App
 $ cd Budget-App
 ```
 
@@ -71,9 +71,15 @@ $ cd Budget-App
 $ docker-compose up --build                                                                   
 ```
 
-#### Listing Existing Routes
+### Listing Existing Routes
 
 - You can now visit `http://localhost:3000` to view your new website!
+
+### For deploying a PostgreSQL pod on Kubernetes using StatefulSet. 
+
+```bash
+$ kubectl apply -f postgres.yml                                                                  
+```
 
 ## Built With 🛠️
 
