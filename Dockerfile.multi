@@ -1,0 +1,68 @@
+# Build stage
+FROM ruby:3.0.2 AS build
+WORKDIR /app
+
+# Install system dependencies and cleanup
+RUN apt-get update -qq && \
+    apt-get install -y build-essential libvips bash bash-completion libffi-dev tzdata postgresql nodejs npm yarn && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/* /usr/share/doc /usr/share/man
+
+# Copy Gemfile and Gemfile.lock to the build stage
+COPY Gemfile Gemfile.lock ./
+
+# Install gems (dependencies) for the application
+RUN bundle install
+
+# Copy the rest of the application source code
+COPY . .
+
+# Set production environment variables
+ENV RAILS_LOG_TO_STDOUT="1" \
+    RAILS_SERVE_STATIC_FILES="true" \
+    RAILS_ENV="production" \
+    BUNDLE_WITHOUT="development"
+
+# Precompile bootsnap code for faster boot times
+RUN bundle exec bootsnap precompile --gemfile app/ lib/
+
+# Build the application (you may customize this step)
+RUN bundle exec rake assets:precompile
+
+# Runtime stage
+FROM ruby:3.0.2-slim
+WORKDIR /app
+
+# Install the PostgreSQL Client in the Runtime Stage
+RUN apt-get update -qq && \
+    apt-get install -y --no-install-recommends \
+    libpq-dev && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/* /usr/share/doc /usr/share/man
+
+# Set production environment variables
+ENV RAILS_LOG_TO_STDOUT="1" \
+    RAILS_SERVE_STATIC_FILES="true" \
+    RAILS_ENV="production" \
+    BUNDLE_WITHOUT="development"
+
+# Copy installed dependiencies gem
+COPY --from=build /usr/local/bundle /usr/local/bundle
+
+# Copy all of the application's assets to the production image (assets:precompile)
+COPY --from=build app/public/assets /app/public/assets
+
+# Copy bootsnap code for faster boot times
+COPY --from=build app/tmp/cache/bootsnap /lib/
+
+COPY . .
+EXPOSE 3000
+
+COPY entrypoint.sh /usr/bin/
+RUN chmod +x /usr/bin/entrypoint.sh
+
+ENTRYPOINT ["/usr/bin/entrypoint.sh"]
+
+# Start your application (adjust the command as needed)
+CMD ["rails", "server", "-b", "0.0.0.0"]
+
